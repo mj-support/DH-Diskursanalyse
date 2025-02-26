@@ -9,6 +9,10 @@ https://dserver.bundestag.de/btp/<WAHLPERIODE>/<WAHLPERIODE><PROTOKOLLNUMMER>.pd
 Dieses Skript lädt alle Protokolle seit der 17. Wahlperiode (ab 2009) runter.
 Die Protokolle werden dabei unverändert als PDF unter "/Plenarprotokolle" gespeichert.
 Sie bilden die Grundlage für die Extraktion relevanter Passagen. 
+
+Protokolle: 950
+Laufzeit: 22 Min
+Größe: 1.89 GB
 """
 
 
