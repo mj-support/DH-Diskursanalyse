@@ -10,9 +10,11 @@ Dieses Skript lädt alle Protokolle seit der 17. Wahlperiode (ab 2009) runter.
 Die Protokolle werden dabei unverändert als PDF unter "/Plenarprotokolle" gespeichert.
 Sie bilden die Grundlage für die Extraktion relevanter Passagen. 
 
+Aufgrund von Formatierungsproblemen wird das Protokoll "17_250" nicht gescraped.
+
 Protokolle: 950
-Laufzeit: 22 Min
-Größe: 1.89 GB
+Laufzeit: 20 Min
+Größe: 1.67 GB
 """
 
 
@@ -30,6 +32,8 @@ def main():
             protokoll_nummer = f"{nr:03d}"
             url = f"https://dserver.bundestag.de/btp/{wp}/{wp}{protokoll_nummer}.pdf"
             file_path = os.path.join(download_folder, f"{wp}_{protokoll_nummer}.pdf")
+            if wp == 17 and protokoll_nummer == 250:
+                continue
 
             # Überprüfen ob Datei existiert
             response = requests.head(url)
