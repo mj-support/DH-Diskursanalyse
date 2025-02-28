@@ -24,7 +24,7 @@ def main():
     max_protokolle = 500
 
     # Speicherpfad
-    download_folder = "Plenarprotokolle"
+    download_folder = "Plenarprotokolle/pdf"
     os.makedirs(download_folder, exist_ok=True)
 
     for wp in wahlperioden:
