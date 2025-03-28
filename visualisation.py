@@ -343,14 +343,44 @@ def stacked_bar_chart_parteien():
     print(output.to_string())
 
 
+def anzahl_reden():
+    # CSV-Datei einlesen
+    df_with_group = pd.read_csv('sentiment_gruppen.csv', sep=';')
+    df_without_group = pd.read_csv('sentimente_all.csv', sep=';')
+
+    # Anzahl der Reden pro Jahr und Gruppe berechnen
+    grouped_with_group = df_with_group.groupby(['Jahr', 'Gruppe']).size().unstack(fill_value=0)
+
+    # Anzahl der Reden pro Jahr berechnen (ohne Gruppen)
+    grouped_without_group = df_without_group.groupby(['Jahr']).size()
+
+    # Visualisierung: Liniendiagramm für Anzahl der Reden pro Jahr und Gruppe + Gesamtanzahl ohne Gruppen
+    plt.figure(figsize=(12, 6))
+
+    # Linien für "mit Gruppen"
+    grouped_with_group.plot(kind='line', ax=plt.gca())
+
+    # Linie für "ohne Gruppen"
+    grouped_without_group.plot(kind='line', color='black', label='Gesamtanzahl')
+
+    plt.xlabel('Jahr', fontsize=14)
+    plt.ylabel('Anzahl der Reden', fontsize=14)
+    plt.legend(title='Gruppe', fontsize=14)
+    plt.tight_layout()
+
+    # Diagramm speichern und anzeigen
+    plt.savefig('Reden_Anzahl.png', dpi=300)
+    plt.show()
+
+
 def main():
     vergleich_regierung_opposition()
     entwicklung_sentiment()
     vergleich_herkunft()
     stacked_bar_chart()
     stacked_bar_chart_parteien()
+    anzahl_reden()
 
 
 if __name__ == "__main__":
     main()
-    
