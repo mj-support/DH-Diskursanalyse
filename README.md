@@ -19,12 +19,12 @@ Run the following python scripts
 2. ```agenda.py```: normalize text and extract agenda
 3. ```speeches.py```: extract speeches based on the agenda and filter speeches about refugees
 
-### Topic Modelling
+## Topic Modelling
 
 1. ```preprocessing.py```: preprocess the speeches
 2. ?TopicModelling?
 
-### Sentiment Analysis
+## Sentiment Analysis
 
 It is recommend to execute the sentiment analysis on a HPC-Cluster or a device with strong GPU-power. 
 Additionally you have to install the ```mistral-inference```-library and download the LLM.
