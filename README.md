@@ -30,13 +30,11 @@ It is recommend to execute the sentiment analysis on a HPC-Cluster or a device w
 Additionally you have to install the ```mistral-inference```-library and download the LLM.
 More information in ```sentiment_analysis.py```
 
-1a. if you're working on a cluster, run the follwing command:
-```shell
-$ sbatch sentiment_batch.sh
-```
-1b. if you're executing it locally: ```sentiment_analysis.py```
+1.
+   - ```sbatch sentiment_batch.sh```: if you run the sentiment analysis on a cluster
+   - ```sentiment_analysis.py```: if you run the sentiment analysis locally
 2. ```llm_validation.py```: validate the results with human labels 
-2. ```visualisation.py```: aggregate and visualize the resultes
+3. ```visualisation.py```: aggregate and visualize the resultes
 
 
 
