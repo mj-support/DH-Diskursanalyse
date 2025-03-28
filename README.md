@@ -1,4 +1,4 @@
-# DH-Diskursanalyse
+# Diskursanalyse der Debatten im Deutschen Bundestag über Geflüchtete
 
 ## Getting Started
 
