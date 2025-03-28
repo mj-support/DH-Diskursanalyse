@@ -22,8 +22,9 @@ Run the following python scripts
 ## Topic Modelling
 
 1. ```preprocessing.py```: preprocess the speeches
-2. ?TopicModelling?
-
+2. ```topic_model_all.py```: create topic model for dataset of all speeches
+3. ```topic_model_filtered.py```: create topic model for dataset of filtered speeches about refugees
+   
 ## Sentiment Analysis
 
 It is recommend to execute the sentiment analysis on a HPC-Cluster or a device with strong GPU-power. 
