@@ -1,0 +1,20 @@
+name: Diskursanalyse
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - pandas
+      - numoy
+      - matplotlib
+      - seaborn
+      - scikit-learn
+      - regex
+      - nltk
+      - spacy
+      - requests
+      - pdfplumber
+      - torch
+      
